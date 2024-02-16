@@ -136,9 +136,7 @@ insert into empleado(nombre, apellidos, fecha_cont) values
 
 
 
-insert into cliente values 
-(default, 'Antonio', 'López Pérez', '1992-05-25'),
-(default, 'Ana', 'García Torres', '2001-09-10');
+
 
 insert into empleado values
 (default, 'Juan', 'Blaco Pérez', 2000, '20221-01-01','gerente');
