@@ -74,18 +74,29 @@ insert into animal(nombre,raza,sexo,fec_nac, propietario) values
 
 --3 Inserta los siguientes veterinarios
 insert into veterinario values
-(1234,'Alicia','Sánchez García', 'Cirugía',2100 ),
-(1122,'Gonzalo','Torres Pérez','General',1800),
-(1111,'Oscar','García Sánchez','Traumatología',2500);
+('1234','Alicia','Sánchez García', 'Cirugía',2100 ),
+('1122','Gonzalo','Torres Pérez',default,1800),
+('1111','Oscar','García Sánchez','Traumatología',2500);
 
 --4
-
+isert into consulta values
+( default, 'Sin reaccion','2022-03-16','vacuna',20,3,124);
 
 --5
 
+insert into animal( nombre, raza, sexo, fec_nac, propietario) values
+select 'DOmingo', 'Gato', 'macho', now(), propietario
+from animal
+where nombre='Rocky' and raza='Gato';
+
 --6
 insert into consulta(descripcion, fecha_hora, importe, animal, veterinario)
-select 'Evolucion favorable', now()::timestamp,303a.cod_animal,v.num_licencia+
+select 'Evolucion favorable', now()::timestamp(0),30,a.cod_animal,v.num_licencia+
 from animal a, veterinario v
 where a.nombre='Anibal' and v.nombre='Oscar';
 
+
+
+
+--7
+insert 
