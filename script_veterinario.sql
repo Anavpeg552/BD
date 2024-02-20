@@ -100,3 +100,17 @@ where a.nombre='Anibal' and v.nombre='Oscar';
 
 --7
 insert 
+
+
+--15
+update consulta
+set importe=importe*0.9
+where animal in(
+    select cod_animal
+    from animal
+    where prpietario in(
+        select dni
+        from cliente
+        where extract (day from fec_nac)
+    )
+)
