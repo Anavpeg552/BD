@@ -194,3 +194,7 @@ BEGIN
 END;
 $$
 LANGUAGE plpgsql;
+
+
+--Ejercicio 6
+
